@@ -1,0 +1,16 @@
+.close-button {
+  cursor: pointer;
+  float: right;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: green;
+}
+
+.modal-title, .close-dismiss {
+  color: white;
+}

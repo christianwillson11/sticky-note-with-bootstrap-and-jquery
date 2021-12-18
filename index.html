@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Note</title>
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <!-- JQUERY 3.5 Compressed-->
+  	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- bootstrap jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+  </head>
+  <body>
+
+    <div class="container mt-5">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" id="tombol-add-note" data-toggle="modal" data-target="#notes-modal">
+        <span class="fa fa-plus"></span>
+        Add Note
+      </button>
+
+      <!-- Modal add -->
+      <div class="modal fade" id="notes-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add Notes</h5>
+              <button type="button" class="close close-dismiss" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <form>
+                <div class="form-group">
+                  <label for="notes_title">Title</label>
+                  <input type="text" class="form-control" id="notes_title" placeholder="Notes Title">
+                </div>
+                <div class="form-group">
+                  <label for="notes_itself">Notes</label>
+                  <textarea class="form-control" id="notes_itself" rows="3" placeholder="Text Notes"></textarea>
+                </div>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" id="add-notes-button" data-dismiss="modal"><span class="fa fa-plus"></span> Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal edit -->
+      <div class="modal fade" id="notes-modal-edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title add-notes-title">Edit Notes</h5>
+              <button type="button" class="close close-dismiss" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <form>
+                <div class="form-group">
+                  <label for="notes_title_edit">Title</label>
+                  <input type="text" class="form-control" id="notes_title_edit" placeholder="Notes Title">
+                </div>
+                <div class="form-group">
+                  <label for="notes_itself_edit">Notes</label>
+                  <textarea class="form-control" id="notes_itself_edit" rows="3" placeholder="Text Notes"></textarea>
+                </div>
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" id="edit-notes-button"><span class="fa fa-edit"></span> Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row cards">
+
+        <div class="card mx-1 my-2" style="width: 18rem;">
+          <div class="card-body">
+            <p class="close-button">x</p>
+            <h5 class="card-title">Title 1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="card mx-1 my-2" style="width: 18rem;">
+          <div class="card-body">
+            <p class="close-button">x</p>
+            <h5 class="card-title">Title 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+          </div>
+        </div>
+
+        <div class="card mx-1 my-2" style="width: 18rem;">
+          <div class="card-body">
+            <p class="close-button">x</p>
+            <h5 class="card-title">Title 3</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
